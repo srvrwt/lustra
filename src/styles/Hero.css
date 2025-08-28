@@ -1,0 +1,161 @@
+.hero {
+    margin-top: -114px;
+    padding-top: 140px;
+    padding-bottom: 110px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url(/src/assets/images/Hero-Bg.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 80px 80px;
+    box-shadow: 0 10px 30px 0 #3024BB4d;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+p {
+    color: var(--white-2);
+    font-family: "GilroyRegular";
+}
+
+/* Stats */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.avatars {
+    display: flex;
+    align-items: center;
+}
+
+.avatars img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: 2px solid var(--blue);
+    margin-left: -10px;
+}
+
+.avatarlast {
+    position: relative;
+    left: -10px;
+    width: 48px;
+    height: 48px;
+}
+
+.avatarlast .more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: var(--white);
+    font-family: 'GilroyMedium';
+}
+
+.rating {
+    font-size: 16px;
+    color: var(--white);
+    font-family: 'GilroyMedium';
+}
+
+.rating .stars {
+    display: block;
+    line-height: 1;
+    margin: 8px 0 4px -2px;
+}
+
+.avatars img:first-child {
+    margin-left: 0;
+}
+
+.hero-image img {
+    max-width: 520px;
+}
+
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+}
+
+.hero-content .highlight:after {
+    background: #FFFFFF33;
+    height: 80%;
+}
+
+.section_heading p {
+    color: var(--black-2);
+    font-family: 'GilroyRegular';
+}
+
+
+
+.section_heading.con-med {
+    max-width: 768px;
+
+}
+
+.section_heading.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:900px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hero-image img {
+        max-width: 700px;
+    }
+
+    .hero-content {
+        max-width: max-content;
+        width: 100%;
+    }
+
+    .hero {
+        border-radius: 0 0 60px 60px;
+        padding-bottom: 160px;
+        background-position: bottom right;
+    }
+
+}
+
+@media (max-width:480px) {
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .hero-stats,
+    .hero-content {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

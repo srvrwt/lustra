@@ -1,0 +1,120 @@
+.stats {
+    margin-top: -95px;
+    position: relative;
+    padding: 0 60px 100px;
+}
+
+.stats:before {
+    position: absolute;
+    top: -80px;
+    left: -198px;
+    height: 360px;
+    width: 360px;
+    max-width: 400px;
+    content: "";
+    background-image: url(/src/assets/icons/vactor-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.stats .container-md {
+    border-radius: 30px;
+    display: flex;
+    padding: 58px 0;
+    background: #ffffff99;
+    backdrop-filter: blur(24px);
+    justify-content: space-between;
+    position: relative;
+}
+
+.stats .container-md:before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    content: "";
+    z-index: -1;
+    background: var(--white);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    width: 100%;
+
+}
+
+.container-md .stat-item:not(:last-child) {
+    border-right: 1px solid #030D1933;
+}
+
+.stat-value {
+    font-size: clamp(30px, 8vw, 60px);
+    font-family: 'gilroy-heavy';
+    color: var(--blue);
+}
+
+.stat-label {
+    font-size: clamp(16px, 4vw, 18px);
+    font-family: "GilroySemibold";
+    color: var(--black);
+}
+
+@media (max-width:900px) {
+
+    .stats .container-md {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+    }
+
+    .stat-item {
+        padding: 30px;
+    }
+
+    .stats {
+
+        padding: 0 30px 50px;
+    }
+
+    .container-md .stat-item:first-child,
+    .container-md .stat-item:nth-child(2) {
+        border-bottom: 1px solid #030D1933;
+    }
+
+    .container-md .stat-item:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width:480px) {
+
+    .stats .container-md,
+    .stat-item {
+        padding: 15px;
+    }
+
+    .stats {
+        padding: 0 15px;
+    }
+
+    .stats .container-md:before,
+    .stats .container-md {
+        border-radius: 12px;
+    }
+
+    .stat-item {
+        min-height: 100px;
+    }
+
+    .stats:before {
+        top: 0;
+        left: -90px;
+        height: 180px;
+        width: 180px;
+    }
+
+}

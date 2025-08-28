@@ -1,0 +1,153 @@
+.pricing {
+    padding: 100px 30px;
+    position: relative;
+
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: .9fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.pricing .cta-section {
+    margin-top: 80px;
+}
+
+.pricing-card .btn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.pricing:before {
+    position: absolute;
+    top: 10%;
+    left: -220px;
+    height: 400px;
+    width: 50%;
+    max-width: 400px;
+    content: "";
+    background-image: url(/src/assets/icons/vactor-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pricing .highlight:after {
+    top: 44%;
+}
+
+.img-wrap {
+    text-align: end;
+}
+
+.img-wrap img {
+    max-width: 500px;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pricing-card .pricing-card {
+    background-color: #F5F4FA;
+}
+
+
+.pricing-card+.pricing-card {
+    margin-top: 20px;
+}
+
+
+.space-title {
+    font-size: 22px;
+    font-family: 'GilroySemibold';
+    color: var(--black);
+}
+
+.pricing-description {
+    font-size: 16px;
+    color: var(--black);
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+}
+
+.pricing-description li {
+    display: flex;
+    gap: 10px;
+
+}
+
+.pricing-description li p {
+    font-size: clamp(14px, 3vw, 16px);
+    font-family: 'GilroyMedium';
+    color: var(--black-2);
+}
+
+.pricing-description li strong {
+    font-family: 'GilroySemibold';
+    color: var(--black);
+}
+
+.pricing-description li img {
+    width: 20px;
+    height: 20px;
+    transform: translateY(2.5px);
+}
+
+.payment-type {
+    font-size: 14px;
+    font-family: 'GilroyRegular';
+    color: #303030;
+    opacity: .7;
+}
+
+.pricing-container .main-price {
+    color: var(--blue);
+    font-family: 'gilroy-bold';
+    font-size: clamp(40px, 8vw, 60px);
+    line-height: .8;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 4px;
+}
+
+@media (max-width:768px) {
+    .pricing-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width:480px) {
+    .pricing {
+        padding: 60px 15px;
+    }
+
+    .pricing-card {
+        border-radius: 12px;
+        padding: 15px;
+    }
+
+    .pricing-description li img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .pricing .cta-section {
+        margin-top: 40px;
+        background-position: left;
+    }
+}
